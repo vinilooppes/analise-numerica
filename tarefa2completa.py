@@ -81,5 +81,4 @@ def resolve_sistemas(l,d,v,a,n):
 '''sol= resolve_sistemas(L,D,v,a,n)
 
 print("o vetor solução do sistema é: " , sol)
-
 '''
