@@ -1,6 +1,4 @@
-n=int(input("Entre com a dimensão da matriz A "))
-
-
+'''n=int(input("Entre com a dimensão da matriz A "))
 
 #Entra com a diagonal matriz A com dimensão N
 
@@ -11,8 +9,6 @@ print("Entre com os elementos da diagonal de A")
 for i in a:
     a[i]=float(input())
 
-
-
 #Entra com a subdiagonal matriz A com dimensão N-1
 
 b=list(range(n-1))
@@ -20,14 +16,12 @@ b=list(range(n-1))
 print("Entre com os elementos da subdiagonal de A")
 
 for i in b:
-    b[i]=float(input())
+    b[i]=float(input())'''
 
+def decomp (a,b,n):                     #Rotina que faz o calculo da decomposição 
 
-d=list(range(n))         #vetor D com dimensão N
-l=list(range(n-1))       #vetor L com dimensão N-1
-
-
-def decomp (a,b):                     #Rotina que faz o calculo da decomposição 
+    d=list(range(n))         #vetor D com dimensão N
+    l=list(range(n-1))       #vetor L com dimensão N-1
     
     d[0]=a[0]
 
@@ -37,9 +31,7 @@ def decomp (a,b):                     #Rotina que faz o calculo da decomposiçã
 
     return l,d  
 
-    
-
-L,D =decomp (a,b)  
+'''L,D =decomp (a,b,n)  
 
 print("O vetor representando L é: ", L)
 print("O vetor representando D é: ", D)
@@ -54,16 +46,15 @@ v=list(range(n))
 print("Entre com o valores do vetor b do sistema linear Ax=b")
 for i in v:
     v[i]=float(input())                    
-
-
-#Vetores "incognitas" para resolver o sistema (dimensão N)
-y=list(range(n))
-z=list(range(n))
-x=list(range(n))
+'''
 
 
 #Rotina que resolve sistemas lineares Ax=v com A tridiagonal simétrica
-def resolve_sistemas(v):               
+def resolve_sistemas(l,d,v,a,n):    
+    #Vetores "incognitas" para resolver o sistema (dimensão N)
+    y=list(range(n))
+    z=list(range(n))
+    x=list(range(n))           
 
     n=len(a)
 
@@ -87,6 +78,8 @@ def resolve_sistemas(v):
 
     return (x)
 
-sol= resolve_sistemas(v)
+'''sol= resolve_sistemas(L,D,v,a,n)
+
 print("o vetor solução do sistema é: " , sol)
 
+'''
